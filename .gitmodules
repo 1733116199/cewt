@@ -1,0 +1,3 @@
+[submodule "gemm-quest/cutlass"]
+	path = gemm-quest/cutlass
+	url = https://github.com/NVIDIA/cutlass.git
