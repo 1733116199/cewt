@@ -254,8 +254,8 @@ class BBQTGCS(torch.nn.Module):
         if self.log_blocksize > 0:
             x = my_hadamard_transform(x, self.log_blocksize)
         
-        rms = x.square().mean().sqrt()
-        crms = x.square().mean(dim=-1, keepdim=True).sqrt()
+        rms = (x.square().mean() + 1e-16).sqrt()
+        crms = (x.square().mean(dim=-1, keepdim=True) + 1e-16).sqrt()
         
         x = 0.5 * (1 + torch.erf((2 ** (-0.5) / rms) * x))
         x = x * self.n_levels - 0.5

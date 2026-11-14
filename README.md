@@ -138,14 +138,7 @@ Refer to `src/toys2.ipynb`.
 ### Table 10 and Figure 6: Ablation Studies on Removing HT and TGCS
 First, run the following experiments.
 ```bash
-bash train_quest.sh 2 none llama adamw; # row 1
-bash train_quest_ablation.sh 2 gaussian llama adamw 0 0; # row 2
-bash train_quest_tgcs.sh 2 gaussian llama adamw; # row 3
-bash train_quest_tgcs_ablation.sh 2 gaussian llama adamw 7 7; # row 4
-bash train_bbq.sh 2 none llama adamw; # row 5
-bash train_bbq_ablation.sh 2 gaussian llama adamw 0 0; # row 6
-bash train_bbq_tgcs.sh 2 gaussian llama adamw; # row 7
-bash train_bbq_tgcs_ablation.sh 2 gaussian llama adamw 7 7; # row 8
+bash train_full_ablation.sh
 ```
 To generate the figure, refer to `src/plots2.ipynb` once the experiments are done.
 
